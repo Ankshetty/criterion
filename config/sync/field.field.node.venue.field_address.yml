@@ -1,0 +1,35 @@
+uuid: d6eb0c9b-23f2-4c82-a7ee-35664510994c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.venue
+  module:
+    - address
+id: node.venue.field_address
+field_name: field_address
+entity_type: node
+bundle: venue
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    sortingCode:
+      override: hidden
+  fields: {  }
+field_type: address

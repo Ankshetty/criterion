@@ -1,0 +1,24 @@
+uuid: b82b62b7-405c-4b2f-aed1-a4f6b7513236
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.venue.body
+    - field.field.node.venue.field_address
+    - node.type.venue
+  module:
+    - user
+id: node.venue.teaser
+targetEntityType: node
+bundle: venue
+mode: teaser
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_address: true

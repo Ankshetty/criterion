@@ -1,0 +1,19 @@
+uuid: df7d154b-0c20-4c24-bb78-45d4b0da68ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_update
+    - node.type.updates
+id: node.updates.field_update
+field_name: field_update
+entity_type: node
+bundle: updates
+label: update
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

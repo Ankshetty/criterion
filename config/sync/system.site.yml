@@ -1,0 +1,14 @@
+uuid: f0f84681-46c4-403d-a4c6-6df749b4d5f3
+name: 'Drupal 8'
+mail: ankitha@specbee.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

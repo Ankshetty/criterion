@@ -1,0 +1,15 @@
+uuid: 19132a9e-6e67-448f-8234-3ca54112c1c7
+langcode: en
+status: true
+dependencies: {  }
+name: event_image_650_450_
+label: 'Event Image (650*450)'
+effects:
+  1f9334d7-5f9d-4fff-9ddd-3d82bdb58d52:
+    uuid: 1f9334d7-5f9d-4fff-9ddd-3d82bdb58d52
+    id: image_scale
+    weight: 1
+    data:
+      width: 650
+      height: 450
+      upscale: false

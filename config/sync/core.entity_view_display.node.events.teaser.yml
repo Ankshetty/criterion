@@ -1,0 +1,65 @@
+uuid: c82b5b75-2a7a-49f2-ac9b-d638e1580e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.body
+    - field.field.node.events.field_audience
+    - field.field.node.events.field_don_t_require_registration
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_image
+    - field.field.node.events.field_paid
+    - field.field.node.events.field_pr
+    - field.field.node.events.field_registration_form
+    - field.field.node.events.field_registration_link
+    - field.field.node.events.field_shoulder_text
+    - field.field.node.events.field_sponsors
+    - field.field.node.events.field_teaser_img
+    - field.field.node.events.field_topics
+    - field.field.node.events.field_venue
+    - image.style.event_teaser_image_350_250_
+    - node.type.events
+  module:
+    - image
+    - text
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  field_shoulder_text:
+    type: text_default
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser_img:
+    type: image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: event_teaser_image_350_250_
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_audience: true
+  field_don_t_require_registration: true
+  field_event_type: true
+  field_image: true
+  field_paid: true
+  field_pr: true
+  field_registration_form: true
+  field_registration_link: true
+  field_sponsors: true
+  field_topics: true
+  field_venue: true

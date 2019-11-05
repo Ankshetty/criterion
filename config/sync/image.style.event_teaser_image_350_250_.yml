@@ -1,0 +1,20 @@
+uuid: fd74dce5-011f-40f4-a458-9b5c8f0bf2dd
+langcode: en
+status: true
+dependencies: {  }
+name: event_teaser_image_350_250_
+label: 'Event Teaser Image (350*250)'
+effects:
+  1fd4c7dc-a243-4054-8080-5cbcaef19add:
+    uuid: 1fd4c7dc-a243-4054-8080-5cbcaef19add
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 250
+      anchor: center-center
+  e68a4c03-6041-47d8-81dd-80f6375d058f:
+    uuid: e68a4c03-6041-47d8-81dd-80f6375d058f
+    id: image_desaturate
+    weight: 2
+    data: {  }

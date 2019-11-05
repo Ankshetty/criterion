@@ -1,0 +1,6 @@
+status: 1
+pattern: '[current-date:long]'
+escape: false
+dependencies:
+  config:
+    - node.type.updates

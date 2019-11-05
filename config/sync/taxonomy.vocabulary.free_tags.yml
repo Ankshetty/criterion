@@ -1,0 +1,8 @@
+uuid: 6e93ef14-071f-4d7e-b739-edbeaea47cdf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Free Tags'
+vid: free_tags
+description: ''
+weight: 0

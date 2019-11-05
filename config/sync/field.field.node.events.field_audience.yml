@@ -1,0 +1,21 @@
+uuid: 34426b8e-3a61-4be9-94fa-34aaecdacd13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - node.type.events
+  module:
+    - options
+id: node.events.field_audience
+field_name: field_audience
+entity_type: node
+bundle: events
+label: Audience
+description: "Marketing\r\nFreelancing\r\nTest"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

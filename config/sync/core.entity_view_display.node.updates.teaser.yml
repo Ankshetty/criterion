@@ -1,0 +1,28 @@
+uuid: dba9921d-9e0a-4283-a63d-1f23c2605f48
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.updates.field_update
+    - node.type.updates
+  module:
+    - user
+id: node.updates.teaser
+targetEntityType: node
+bundle: updates
+mode: teaser
+content:
+  field_update:
+    type: basic_string
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: ac4c38e2-2df1-43a3-9024-b1aa5df28cab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_link
+    - node.type.events
+  module:
+    - link
+id: node.events.field_registration_link
+field_name: field_registration_link
+entity_type: node
+bundle: events
+label: 'Registration Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://www.drupal.org/docs/user_guide/en/index.html'
+    title: 'Click here'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
