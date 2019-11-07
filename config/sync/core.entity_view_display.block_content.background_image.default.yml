@@ -1,0 +1,35 @@
+uuid: 4599aee3-c274-4bf4-88f2-7db8cbda866f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_image
+    - field.field.block_content.background_image.body
+    - field.field.block_content.background_image.field_background
+    - field.field.block_content.background_image.field_welcome_text
+  module:
+    - image
+    - text
+id: block_content.background_image.default
+targetEntityType: block_content
+bundle: background_image
+mode: default
+content:
+  field_background:
+    weight: 2
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_welcome_text:
+    weight: 1
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true

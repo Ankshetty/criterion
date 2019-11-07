@@ -1,0 +1,20 @@
+uuid: d257f487-0b6a-4d2c-80d8-ca2a3db2bcbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_welcome_text
+field_name: field_welcome_text
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

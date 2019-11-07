@@ -1,0 +1,31 @@
+uuid: 97717076-5845-4c0b-9785-e796b258c9c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:background_image:42a9f88a-f2d7-459f-be1e-abed3c97c2b1'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: block1
+theme: bartik
+region: featured_top
+weight: 0
+provider: null
+plugin: 'block_content:42a9f88a-f2d7-459f-be1e-abed3c97c2b1'
+settings:
+  id: 'block_content:42a9f88a-f2d7-459f-be1e-abed3c97c2b1'
+  label: Block1
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

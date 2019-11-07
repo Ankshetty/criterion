@@ -1,0 +1,25 @@
+uuid: 9d21f38a-2f75-4504-9fdf-c5c0a28722b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-demo
+  module:
+    - system
+  theme:
+    - bartik
+id: menudemo
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-demo'
+settings:
+  id: 'system_menu_block:menu-demo'
+  label: 'Menu Demo'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

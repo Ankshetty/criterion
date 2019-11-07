@@ -1,0 +1,12 @@
+uuid: 51891d3e-7cb8-4561-a3d4-97cd7e01631e
+langcode: en
+status: true
+dependencies: {  }
+id: event_manager_role
+label: 'Event Manager Role'
+weight: 3
+is_admin: null
+permissions:
+  - 'create events content'
+  - 'delete own events content'
+  - 'edit own events content'
