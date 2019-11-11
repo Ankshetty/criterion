@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.background_image.field_background
     - field.field.block_content.background_image.field_welcome_text
   module:
-    - image
     - text
 id: block_content.background_image.default
 targetEntityType: block_content
@@ -16,13 +15,13 @@ bundle: background_image
 mode: default
 content:
   field_background:
+    type: entity_reference_entity_view
     weight: 2
     label: visually_hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: image
     region: content
   field_welcome_text:
     weight: 1

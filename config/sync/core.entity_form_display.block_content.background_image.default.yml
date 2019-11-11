@@ -7,9 +7,8 @@ dependencies:
     - field.field.block_content.background_image.body
     - field.field.block_content.background_image.field_background
     - field.field.block_content.background_image.field_welcome_text
-    - image.style.thumbnail
   module:
-    - image
+    - media_library
     - text
 id: block_content.background_image.default
 targetEntityType: block_content
@@ -17,15 +16,14 @@ bundle: background_image
 mode: default
 content:
   field_background:
+    type: media_library_widget
     weight: 26
     settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_welcome_text:
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''

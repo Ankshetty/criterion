@@ -4,7 +4,7 @@ module:
   auto_entitylabel: 0
   automated_cron: 0
   background_image: 0
-  background_image_formatter: 0
+  bg_image_formatter: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -14,8 +14,14 @@ module:
   comment: 0
   conditional_fields: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
+  ctools: 0
+  ctools_block: 0
+  ctools_views: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -31,6 +37,8 @@ module:
   image: 0
   inline_entity_form: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -55,7 +63,9 @@ module:
   webform_node: 0
   webform_templates: 0
   webform_ui: 0
+  workflows: 0
   menu_link_content: 1
+  pathauto: 1
   views: 10
   standard: 1000
 theme:

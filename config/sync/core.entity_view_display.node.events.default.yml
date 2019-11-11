@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.events_comment.default
     - field.field.node.events.body
     - field.field.node.events.field_audience
     - field.field.node.events.field_comment_section
     - field.field.node.events.field_don_t_require_registration
+    - field.field.node.events.field_event_end_date
+    - field.field.node.events.field_event_image
+    - field.field.node.events.field_event_start_date
     - field.field.node.events.field_event_type
-    - field.field.node.events.field_image
     - field.field.node.events.field_paid
     - field.field.node.events.field_pr
     - field.field.node.events.field_registration_form
@@ -18,11 +21,10 @@ dependencies:
     - field.field.node.events.field_teaser_img
     - field.field.node.events.field_topics
     - field.field.node.events.field_venue
-    - image.style.event_image_650_450_
     - node.type.events
   module:
     - comment
-    - image
+    - datetime
     - link
     - options
     - user
@@ -40,7 +42,7 @@ content:
     type: list_default
     region: content
   field_comment_section:
-    weight: 10
+    weight: 12
     label: above
     settings:
       view_mode: default
@@ -48,21 +50,39 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
+  field_event_end_date:
+    weight: 6
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_event_start_date:
+    weight: 5
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_event_type:
     weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
-    region: content
-  field_image:
-    weight: 0
-    label: visually_hidden
-    settings:
-      image_style: event_image_650_450_
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_paid:
     weight: 2
@@ -86,7 +106,7 @@ content:
     type: number_decimal
     region: content
   field_registration_form:
-    weight: 9
+    weight: 11
     label: above
     settings:
       source_entity: true
@@ -94,7 +114,7 @@ content:
     type: webform_entity_reference_entity_view
     region: content
   field_registration_link:
-    weight: 5
+    weight: 7
     label: above
     settings:
       trim_length: 80
@@ -106,7 +126,7 @@ content:
     type: link
     region: content
   field_sponsors:
-    weight: 8
+    weight: 10
     label: above
     settings:
       link: true
@@ -115,7 +135,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_topics:
-    weight: 6
+    weight: 8
     label: above
     settings:
       link: true
@@ -123,7 +143,7 @@ content:
     type: entity_reference_label
     region: content
   field_venue:
-    weight: 7
+    weight: 9
     label: above
     settings:
       link: true

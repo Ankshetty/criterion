@@ -1,0 +1,23 @@
+uuid: 87276848-388e-440f-a805-a5e6540039ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.upcoming_events
+  module:
+    - views
+  theme:
+    - bartik
+id: exposedformupcoming_eventspage_1
+theme: bartik
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'views_exposed_filter_block:upcoming_events-page_1'
+settings:
+  id: 'views_exposed_filter_block:upcoming_events-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

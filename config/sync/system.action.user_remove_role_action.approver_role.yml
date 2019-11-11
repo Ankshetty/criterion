@@ -1,0 +1,14 @@
+uuid: f4812a52-51ce-4c6c-8606-46e3e0653887
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.approver_role
+  module:
+    - user
+id: user_remove_role_action.approver_role
+label: 'Remove the Approver Role role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: approver_role

@@ -1,0 +1,31 @@
+uuid: ca0446cf-79ba-4740-bac1-f83ac5c7d0c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: event_manager
+label: 'Event Manager'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: 0
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 1
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+  entity_types: {  }
+  default_moderation_state: draft

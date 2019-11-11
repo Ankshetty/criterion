@@ -1,0 +1,32 @@
+uuid: 1f3887be-a8b5-44c1-82d3-6b7ece6c8990
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.my_events
+  module:
+    - user
+    - views
+  theme:
+    - bartik
+id: views_block__my_events_block_1
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:my_events-block_1'
+settings:
+  id: 'views_block:my_events-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      event_manager_role: event_manager_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

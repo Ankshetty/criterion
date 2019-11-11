@@ -7,6 +7,13 @@ label: 'Event Manager Role'
 weight: 3
 is_admin: null
 permissions:
+  - 'administer node form display'
   - 'create events content'
   - 'delete own events content'
   - 'edit own events content'
+  - 'use editorial transition create_new_draft'
+  - 'use events_manager transition create_new_draft'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own webform submission'
+  - 'view the administration theme'

@@ -1,0 +1,24 @@
+uuid: 41f95073-f0fa-4de1-8e18-dcba25ae2839
+langcode: en
+status: true
+dependencies: {  }
+id: approver_role
+label: 'Approver Role'
+weight: 4
+is_admin: null
+permissions:
+  - 'administer node form display'
+  - 'edit any events content'
+  - 'edit own events content'
+  - 'revert events revisions'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition draft_to_archive'
+  - 'use editorial transition publish'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view own webform submission'
+  - 'view the administration theme'

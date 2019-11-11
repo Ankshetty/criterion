@@ -6,9 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.events.body
     - field.field.node.events.field_audience
+    - field.field.node.events.field_comment_section
     - field.field.node.events.field_don_t_require_registration
     - field.field.node.events.field_event_type
-    - field.field.node.events.field_image
     - field.field.node.events.field_paid
     - field.field.node.events.field_pr
     - field.field.node.events.field_registration_form
@@ -53,9 +53,9 @@ content:
 hidden:
   body: true
   field_audience: true
+  field_comment_section: true
   field_don_t_require_registration: true
   field_event_type: true
-  field_image: true
   field_paid: true
   field_pr: true
   field_registration_form: true
