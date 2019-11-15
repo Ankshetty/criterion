@@ -1,0 +1,8 @@
+uuid: f9018163-18a0-4b8b-9322-da3e57ceb0cf
+langcode: en
+status: true
+dependencies: {  }
+name: 'Parent Tags'
+vid: parent_tags
+description: ''
+weight: 0

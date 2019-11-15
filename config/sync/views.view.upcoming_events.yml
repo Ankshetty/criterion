@@ -3,11 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_address
     - field.storage.node.field_audience
+    - field.storage.node.field_event_start_date
+    - field.storage.node.field_featured
     - field.storage.node.field_shoulder_text
-    - field.storage.node.field_venue
+    - field.storage.user.field_full_name
     - node.type.events
+    - system.menu.main
+    - views.view.upcoming_featured_event
   module:
+    - address
     - datetime
     - node
     - options
@@ -81,6 +87,135 @@ display:
           separator: ''
           hide_empty: false
       fields:
+        field_event_start_date:
+          id: field_event_start_date
+          table: node__field_event_start_date
+          field: field_event_start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_featured:
+          id: field_featured
+          table: node__field_featured
+          field: field_featured
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: custom
+            format_custom_true: Featured
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -91,8 +226,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div>\r\n<div>{{ field_event_start_date }}</div>\r\n<h2>{{ title }}</h2>\r\n<span>{{ field_featured }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -270,14 +405,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_venue:
-          id: field_venue
-          table: node__field_venue
-          field: field_venue
-          relationship: none
+        field_full_name:
+          id: field_full_name
+          table: user__field_full_name
+          field: field_full_name
+          relationship: uid
           group_type: group
           admin_label: ''
-          label: 'Event Venue'
+          label: 'Event Manager'
           exclude: false
           alter:
             alter_text: false
@@ -318,11 +453,72 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_entity_view
-          settings:
-            view_mode: default
-          group_column: target_id
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_address:
+          id: field_address
+          table: node__field_address
+          field: field_address
+          relationship: field_venue
+          group_type: group
+          admin_label: ''
+          label: Venue
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: langcode
+          type: address_default
+          settings: {  }
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -478,52 +674,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_venue_target_id:
-          id: field_venue_target_id
-          table: node__field_venue
-          field: field_venue_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_venue_target_id_op
-            label: 'Venue (field_venue)'
-            description: ''
-            use_operator: false
-            operator: field_venue_target_id_op
-            identifier: field_venue_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              event_manager_role: '0'
-              approver_role: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: numeric
         field_event_start_date_value:
           id: field_event_start_date_value
           table: node__field_event_start_date
@@ -568,26 +718,68 @@ display:
             group_items: {  }
           plugin_id: datetime
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+        field_event_start_date_value:
+          id: field_event_start_date_value
+          table: node__field_event_start_date
+          field: field_event_start_date_value
           relationship: none
           group_type: group
           admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
           granularity: second
+          plugin_id: datetime
       title: 'Upcoming Events'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: 'Upcoming Latest Featured Events : '
+            format: basic_html
+          plugin_id: text
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'upcoming_featured_event:block_1'
+          inherit_arguments: true
+          plugin_id: view
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        uid:
+          id: uid
+          table: node_field_revision
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: User
+          required: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+        field_venue:
+          id: field_venue
+          table: node__field_venue
+          field: field_venue
+          relationship: none
+          group_type: group
+          admin_label: 'field_venue: Content'
+          required: false
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -600,9 +792,12 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_address'
         - 'config:field.storage.node.field_audience'
+        - 'config:field.storage.node.field_event_start_date'
+        - 'config:field.storage.node.field_featured'
         - 'config:field.storage.node.field_shoulder_text'
-        - 'config:field.storage.node.field_venue'
+        - 'config:field.storage.user.field_full_name'
   page_1:
     display_plugin: page
     id: page_1
@@ -612,6 +807,15 @@ display:
       display_extenders: {  }
       path: upcoming-events
       exposed_block: true
+      menu:
+        type: normal
+        title: 'Upcoming Events'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
@@ -622,6 +826,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.field_address'
         - 'config:field.storage.node.field_audience'
+        - 'config:field.storage.node.field_event_start_date'
+        - 'config:field.storage.node.field_featured'
         - 'config:field.storage.node.field_shoulder_text'
-        - 'config:field.storage.node.field_venue'
+        - 'config:field.storage.user.field_full_name'

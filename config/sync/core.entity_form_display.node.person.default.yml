@@ -1,0 +1,45 @@
+uuid: d9bd5d38-22b5-4503-8d99-b455dca2669e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.field_department
+    - field.field.node.person.field_unid
+    - node.type.person
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_department:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_unid:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  moderation_state: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

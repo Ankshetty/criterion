@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.events.field_event_image
     - field.field.node.events.field_event_start_date
     - field.field.node.events.field_event_type
+    - field.field.node.events.field_featured
     - field.field.node.events.field_paid
     - field.field.node.events.field_pr
     - field.field.node.events.field_registration_form
@@ -22,9 +23,11 @@ dependencies:
     - field.field.node.events.field_venue
     - image.style.thumbnail
     - node.type.events
+    - workflows.workflow.editorial
   module:
     - comment
     - conditional_fields
+    - content_moderation
     - datetime
     - field_group
     - image
@@ -54,7 +57,7 @@ third_party_settings:
         - field_event_start_date
         - field_event_end_date
       parent_name: ''
-      weight: 9
+      weight: 8
       format_type: fieldset
       format_settings:
         id: ''
@@ -75,13 +78,13 @@ content:
     type: options_select
     region: content
   field_comment_section:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   field_don_t_require_registration:
-    weight: 12
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
@@ -107,10 +110,20 @@ content:
     type: datetime_default
     region: content
   field_event_type:
-    weight: 8
-    settings: {  }
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
+    region: content
+  field_featured:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_paid:
     weight: 4
@@ -148,7 +161,7 @@ content:
     type: number
     region: content
   field_registration_form:
-    weight: 13
+    weight: 14
     settings:
       default_data: true
     third_party_settings:
@@ -188,7 +201,7 @@ content:
     type: text_textarea
     region: content
   field_sponsors:
-    weight: 11
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -214,7 +227,7 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_venue:
-    weight: 10
+    weight: 11
     settings:
       form_mode: default
       label_singular: ''
@@ -229,9 +242,15 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 17
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 15
+    weight: 16
     region: content
     settings:
       display_label: true

@@ -1,0 +1,11 @@
+uuid: c441c0df-096c-45eb-bd4e-73151a02ca7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.venue
+id: node_type_venue
+action: page_redirect
+allow_override: 1
+redirect: 'http://localhost/rabbit_hole/web/access-denied'
+redirect_code: 301

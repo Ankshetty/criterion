@@ -1,0 +1,38 @@
+uuid: 2c4cbbaf-3ab3-4b7c-9684-a4d74bcf267e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.field_department
+    - field.field.node.person.field_unid
+    - node.type.person
+  module:
+    - user
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_department:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_unid:
+    weight: 0
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

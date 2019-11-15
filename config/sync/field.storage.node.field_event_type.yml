@@ -1,27 +1,17 @@
-uuid: 958f7ba6-8b67-40d6-9065-539150a1f6d7
+uuid: 79c33d59-3ba6-446f-ad37-fd3dbd92a38f
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - options
+    - taxonomy
 id: node.field_event_type
 field_name: field_event_type
 entity_type: node
-type: list_string
+type: entity_reference
 settings:
-  allowed_values:
-    -
-      value: 'Awareness Programme'
-      label: 'Awareness Programme'
-    -
-      value: 'Animal Charities'
-      label: 'Animal Charities'
-    -
-      value: Conferences
-      label: Conferences
-  allowed_values_function: ''
-module: options
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

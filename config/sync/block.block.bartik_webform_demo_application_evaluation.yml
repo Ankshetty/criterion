@@ -16,7 +16,7 @@ _core:
 id: bartik_webform_demo_application_evaluation
 theme: bartik
 region: content
-weight: 5
+weight: -4
 provider: null
 plugin: webform_block
 settings:

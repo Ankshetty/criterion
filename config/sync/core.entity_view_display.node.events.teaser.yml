@@ -8,7 +8,11 @@ dependencies:
     - field.field.node.events.field_audience
     - field.field.node.events.field_comment_section
     - field.field.node.events.field_don_t_require_registration
+    - field.field.node.events.field_event_end_date
+    - field.field.node.events.field_event_image
+    - field.field.node.events.field_event_start_date
     - field.field.node.events.field_event_type
+    - field.field.node.events.field_featured
     - field.field.node.events.field_paid
     - field.field.node.events.field_pr
     - field.field.node.events.field_registration_form
@@ -29,6 +33,11 @@ targetEntityType: node
 bundle: events
 mode: teaser
 content:
+  content_moderation_control:
+    weight: -20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_shoulder_text:
     type: text_default
     weight: 1
@@ -55,7 +64,11 @@ hidden:
   field_audience: true
   field_comment_section: true
   field_don_t_require_registration: true
+  field_event_end_date: true
+  field_event_image: true
+  field_event_start_date: true
   field_event_type: true
+  field_featured: true
   field_paid: true
   field_pr: true
   field_registration_form: true
@@ -63,3 +76,4 @@ hidden:
   field_sponsors: true
   field_topics: true
   field_venue: true
+  search_api_excerpt: true

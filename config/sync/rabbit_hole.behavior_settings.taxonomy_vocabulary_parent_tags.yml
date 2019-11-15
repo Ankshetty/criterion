@@ -1,0 +1,11 @@
+uuid: 7ba6630d-f4f1-4379-8ad3-02018ae8adf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.parent_tags
+id: taxonomy_vocabulary_parent_tags
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

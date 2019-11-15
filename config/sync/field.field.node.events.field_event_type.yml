@@ -1,12 +1,11 @@
-uuid: e390dec8-008b-403f-9368-e27076037e35
+uuid: 9ee01632-2e88-4885-a23c-ee8209c1e11d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_event_type
     - node.type.events
-  module:
-    - options
+    - taxonomy.vocabulary.event_type
 id: node.events.field_event_type
 field_name: field_event_type
 entity_type: node
@@ -17,5 +16,14 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: list_string
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_type: event_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
