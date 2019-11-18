@@ -9,7 +9,7 @@ dependencies:
 id: aggregatorfeed
 theme: bartik
 region: sidebar_first
-weight: 0
+weight: -12
 provider: null
 plugin: aggregator_feed_block
 settings:

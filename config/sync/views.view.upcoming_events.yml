@@ -11,12 +11,14 @@ dependencies:
     - field.storage.user.field_full_name
     - node.type.events
     - system.menu.main
+    - taxonomy.vocabulary.event_type
     - views.view.upcoming_featured_event
   module:
     - address
     - datetime
     - node
     - options
+    - taxonomy
     - text
     - user
 id: upcoming_events
@@ -563,53 +565,11 @@ display:
           exposed: true
           expose:
             operator_id: field_audience_value_op
-            label: 'Audience (field_audience)'
+            label: Audience
             description: ''
             use_operator: false
             operator: field_audience_value_op
             identifier: field_audience_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              event_manager_role: '0'
-              approver_role: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-        field_event_type_value:
-          id: field_event_type_value
-          table: node__field_event_type
-          field: field_event_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_event_type_value_op
-            label: 'Event Type (field_event_type)'
-            description: ''
-            use_operator: false
-            operator: field_event_type_value_op
-            identifier: field_event_type_value
             required: false
             remember: false
             multiple: false
@@ -647,7 +607,7 @@ display:
           exposed: true
           expose:
             operator_id: ''
-            label: 'Paid (field_paid)'
+            label: Paid
             description: ''
             use_operator: false
             operator: field_paid_value_op
@@ -717,6 +677,99 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
+        field_event_type_target_id:
+          id: field_event_type_target_id
+          table: node__field_event_type
+          field: field_event_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_event_type_target_id_op
+            label: 'Event Type'
+            description: ''
+            use_operator: false
+            operator: field_event_type_target_id_op
+            identifier: field_event_type_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              event_manager_role: '0'
+              approver_role: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: event_type
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_venue_target_id:
+          id: field_venue_target_id
+          table: node__field_venue
+          field: field_venue_target_id
+          relationship: field_venue
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_venue_target_id_op
+            label: Venue
+            description: ''
+            use_operator: false
+            operator: field_venue_target_id_op
+            identifier: field_venue_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              event_manager_role: '0'
+              approver_role: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       sorts:
         field_event_start_date_value:
           id: field_event_start_date_value
@@ -789,6 +842,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -823,6 +877,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

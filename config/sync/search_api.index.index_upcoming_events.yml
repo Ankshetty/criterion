@@ -1,0 +1,137 @@
+uuid: 7e0832eb-9b22-425a-a79d-ee820d1dbb05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - field.storage.node.field_event_start_date
+    - field.storage.node.field_event_type
+    - field.storage.node.field_featured
+    - field.storage.node.field_paid
+    - field.storage.node.field_shoulder_text
+    - field.storage.node.field_venue
+    - field.storage.user.field_full_name
+    - search_api.server.server
+  module:
+    - node
+    - search_api
+    - user
+id: index_upcoming_events
+name: 'index upcoming events'
+description: ''
+read_only: false
+field_settings:
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_audience:
+    label: Audience
+    datasource_id: 'entity:node'
+    property_path: field_audience
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_audience
+  field_event_start_date:
+    label: 'Event Start Date'
+    datasource_id: 'entity:node'
+    property_path: field_event_start_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_start_date
+  field_event_type:
+    label: 'Event Type'
+    datasource_id: 'entity:node'
+    property_path: field_event_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_type
+  field_featured:
+    label: Featured
+    datasource_id: 'entity:node'
+    property_path: field_featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_featured
+  field_full_name:
+    label: 'Full Name'
+    datasource_id: 'entity:user'
+    property_path: field_full_name
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_full_name
+  field_paid:
+    label: Paid
+    datasource_id: 'entity:node'
+    property_path: field_paid
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_paid
+  field_shoulder_text:
+    label: 'Shoulder Text'
+    datasource_id: 'entity:node'
+    property_path: field_shoulder_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_shoulder_text
+  field_venue:
+    label: Venue
+    datasource_id: 'entity:node'
+    property_path: field_venue
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_venue
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - events
+        - venue
+    languages:
+      default: true
+      selected: {  }
+  'entity:user':
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: server

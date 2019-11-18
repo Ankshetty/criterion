@@ -1,0 +1,23 @@
+uuid: ebe388ef-b43c-4a9b-a733-9f80255ebe21
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.event_types
+  module:
+    - facets
+  theme:
+    - bartik
+id: eventtypes
+theme: bartik
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'facet_block:event_types'
+settings:
+  id: 'facet_block:event_types'
+  label: 'Event Types'
+  provider: facets
+  label_display: visible
+  block_id: eventtypes
+visibility: {  }

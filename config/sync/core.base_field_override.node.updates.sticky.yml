@@ -1,0 +1,22 @@
+uuid: ca40c739-9d35-491d-969e-5363fd0c750a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.updates
+id: node.updates.sticky
+field_name: sticky
+entity_type: node
+bundle: updates
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: a64f8f17-fd98-43ec-82cd-13851f9efb40
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.audience
+  module:
+    - facets
+  theme:
+    - bartik
+id: audience
+theme: bartik
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'facet_block:audience'
+settings:
+  id: 'facet_block:audience'
+  label: Audience
+  provider: facets
+  label_display: visible
+  block_id: audience
+visibility: {  }

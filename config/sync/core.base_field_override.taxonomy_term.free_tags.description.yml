@@ -1,0 +1,20 @@
+uuid: 22402ef5-7be8-4cef-ac33-82503dec32d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.free_tags
+  module:
+    - text
+id: taxonomy_term.free_tags.description
+field_name: description
+entity_type: taxonomy_term
+bundle: free_tags
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

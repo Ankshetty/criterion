@@ -1,0 +1,22 @@
+uuid: d1dde0fb-28f6-4ce2-b8e5-724cc7262bad
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.free_tags
+id: taxonomy_term.free_tags.status
+field_name: status
+entity_type: taxonomy_term
+bundle: free_tags
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 164d8e42-a548-4bbe-8ee1-84ba30a6522b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.venue
+id: node.venue.uid
+field_name: uid
+entity_type: node
+bundle: venue
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

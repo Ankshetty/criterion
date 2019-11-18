@@ -1,0 +1,18 @@
+uuid: b92f49a6-e17c-4a24-b7d5-07c2d1243fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.free_tags
+id: taxonomy_term.free_tags.name
+field_name: name
+entity_type: taxonomy_term
+bundle: free_tags
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

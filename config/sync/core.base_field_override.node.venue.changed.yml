@@ -1,0 +1,18 @@
+uuid: af65d04f-879a-4d9e-b53c-eac77eac5e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.venue
+id: node.venue.changed
+field_name: changed
+entity_type: node
+bundle: venue
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

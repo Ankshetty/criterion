@@ -1,0 +1,14 @@
+uuid: a4a073fb-9510-475b-89ed-a42ef70da34e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.attendie
+  module:
+    - user
+id: user_remove_role_action.attendie
+label: 'Remove the Attendie role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: attendie

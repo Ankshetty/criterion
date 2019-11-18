@@ -1,0 +1,18 @@
+uuid: 3bedd143-5894-4e79-bb3a-0ce91bbd2ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sponsor
+id: taxonomy_term.sponsor.name
+field_name: name
+entity_type: taxonomy_term
+bundle: sponsor
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

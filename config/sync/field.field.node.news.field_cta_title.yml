@@ -1,0 +1,24 @@
+uuid: ba252b1e-47ba-47d5-b822-8f2c83d1b412
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cta_title
+    - node.type.news
+  module:
+    - text
+id: node.news.field_cta_title
+field_name: field_cta_title
+entity_type: node
+bundle: news
+label: 'CTA Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Default CTA Title'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

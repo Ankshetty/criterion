@@ -1,0 +1,14 @@
+uuid: bacee397-f35f-4149-8dce-1d0b8ca4ef34
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.attendie
+  module:
+    - user
+id: user_add_role_action.attendie
+label: 'Add the Attendie role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: attendie

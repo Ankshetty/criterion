@@ -1,0 +1,20 @@
+uuid: d9e31458-29b7-4503-9e90-f355ac94e592
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.free_tags
+  module:
+    - path
+id: taxonomy_term.free_tags.path
+field_name: path
+entity_type: taxonomy_term
+bundle: free_tags
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

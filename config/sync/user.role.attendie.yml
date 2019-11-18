@@ -1,0 +1,9 @@
+uuid: f43e1495-3e93-4599-a1aa-c175d29793cc
+langcode: en
+status: true
+dependencies: {  }
+id: attendie
+label: Attendee
+weight: 5
+is_admin: null
+permissions: {  }

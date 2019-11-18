@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.person.field_department
     - field.field.node.person.field_unid
     - node.type.person
   module:
@@ -19,4 +20,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_department: true
   field_unid: true
+  langcode: true
+  search_api_excerpt: true

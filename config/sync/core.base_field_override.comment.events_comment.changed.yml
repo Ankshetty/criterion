@@ -1,0 +1,18 @@
+uuid: 148a43d1-e76f-4f5d-b416-e6a07ff5b7d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.events_comment
+id: comment.events_comment.changed
+field_name: changed
+entity_type: comment
+bundle: events_comment
+label: Changed
+description: 'The time that the comment was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

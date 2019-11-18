@@ -1,0 +1,18 @@
+uuid: bb69ea81-1ed9-44ea-a2dc-678474f73914
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.parent_tags
+id: taxonomy_term.parent_tags.name
+field_name: name
+entity_type: taxonomy_term
+bundle: parent_tags
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

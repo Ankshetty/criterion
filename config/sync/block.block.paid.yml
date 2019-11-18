@@ -1,0 +1,23 @@
+uuid: 34828479-c759-4950-8777-961053a16b03
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.paid
+  module:
+    - facets
+  theme:
+    - bartik
+id: paid
+theme: bartik
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'facet_block:paid'
+settings:
+  id: 'facet_block:paid'
+  label: Paid
+  provider: facets
+  label_display: visible
+  block_id: paid
+visibility: {  }
