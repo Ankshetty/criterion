@@ -3,13 +3,230 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
+    - field.field.user.user.field_age
+    - field.field.user.user.field_designation
+    - field.field.user.user.field_education_level
+    - field.field.user.user.field_first_name
     - field.field.user.user.field_full_name
+    - field.field.user.user.field_institution_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_marital_status
+    - field.field.user.user.field_organisation
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - layout_builder
+    - options
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          column_widths: 33-34-33
+        components:
+          4093dc70-9e51-4af3-8adb-df12c8c34ec8:
+            uuid: 4093dc70-9e51-4af3-8adb-df12c8c34ec8
+            region: first
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Basic Info'
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 5
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          a7bbf643-6f9a-4d2d-9061-52077a209502:
+            uuid: a7bbf643-6f9a-4d2d-9061-52077a209502
+            region: second
+            configuration:
+              id: 'inline_block:basic'
+              label: Education
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 6
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          6953a899-6034-4607-8550-aae95cc6a0fc:
+            uuid: 6953a899-6034-4607-8550-aae95cc6a0fc
+            region: third
+            configuration:
+              id: 'inline_block:basic'
+              label: Profession
+              provider: layout_builder
+              label_display: visible
+              view_mode: full
+              block_revision_id: 7
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          11aafa4c-c746-469e-9565-ada9bd70dc5c:
+            uuid: 11aafa4c-c746-469e-9565-ada9bd70dc5c
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_first_name'
+              label: 'First Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          2091041d-8118-44a9-a892-2a1f9cd230a5:
+            uuid: 2091041d-8118-44a9-a892-2a1f9cd230a5
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_last_name'
+              label: 'Last Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          5cf6420d-8089-4c5b-bf7e-89135285caa1:
+            uuid: 5cf6420d-8089-4c5b-bf7e-89135285caa1
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_age'
+              label: Age
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: number_integer
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+          01ab10e0-8281-4447-9605-00f2a87d572c:
+            uuid: 01ab10e0-8281-4447-9605-00f2a87d572c
+            region: second
+            configuration:
+              id: 'field_block:user:user:field_education_level'
+              label: 'Education Level'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          214265ef-cb66-48da-ba67-ea461cefb2c1:
+            uuid: 214265ef-cb66-48da-ba67-ea461cefb2c1
+            region: second
+            configuration:
+              id: 'field_block:user:user:field_institution_name'
+              label: 'Institution Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          c19156cc-a3b8-48e3-9bf4-3bd7ad26e17e:
+            uuid: c19156cc-a3b8-48e3-9bf4-3bd7ad26e17e
+            region: third
+            configuration:
+              id: 'field_block:user:user:field_organisation'
+              label: Organisation
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          a7b12600-4b75-43ea-9e54-dc46e968fd96:
+            uuid: a7b12600-4b75-43ea-9e54-dc46e968fd96
+            region: third
+            configuration:
+              id: 'field_block:user:user:field_designation'
+              label: Designation
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          cd2fa98e-c5d4-4a3a-8c7f-3910d056aff4:
+            uuid: cd2fa98e-c5d4-4a3a-8c7f-3910d056aff4
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_marital_status'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 3
+          0a516372-915a-4685-8314-8446263556cf:
+            uuid: 0a516372-915a-4685-8314-8446263556cf
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_marital_status'
+              label: 'Marital Status'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: list_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -17,8 +234,66 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_age:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_designation:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_education_level:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_first_name:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_full_name:
     weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_institution_name:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_last_name:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_marital_status:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: second
+  field_organisation:
+    weight: 10
     label: above
     settings: {  }
     third_party_settings: {  }

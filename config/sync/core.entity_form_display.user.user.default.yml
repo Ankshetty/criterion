@@ -3,14 +3,68 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_age
+    - field.field.user.user.field_designation
+    - field.field.user.user.field_education_level
+    - field.field.user.user.field_first_name
     - field.field.user.user.field_full_name
+    - field.field.user.user.field_institution_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_marital_status
+    - field.field.user.user.field_organisation
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - field_group
     - image
-    - path
     - text
     - user
+third_party_settings:
+  field_group:
+    group_basic_info:
+      children:
+        - field_first_name
+        - field_last_name
+        - field_age
+        - field_marital_status
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Basic Info'
+      region: content
+    group_education:
+      children:
+        - field_education_level
+        - field_institution_name
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Education
+      region: content
+    group_profession:
+      children:
+        - field_organisation
+        - field_designation
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Profession
+      region: content
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -19,44 +73,77 @@ bundle: user
 mode: default
 content:
   account:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  contact:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_full_name:
     weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_age:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_designation:
+    weight: 18
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: text_textfield
     region: content
-  google_analytics:
-    weight: 4
-    region: content
+  field_education_level:
+    weight: 20
     settings: {  }
     third_party_settings: {  }
-  language:
-    weight: 3
+    type: options_select
     region: content
+  field_first_name:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_full_name:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_institution_name:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_last_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_marital_status:
+    weight: 13
     settings: {  }
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 7
+    type: options_select
     region: content
-    settings: {  }
+  field_organisation:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-  timezone:
-    weight: 6
+    type: text_textfield
     region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image_image
     settings:
@@ -66,4 +153,9 @@ content:
     weight: 2
     region: content
 hidden:
+  contact: true
+  google_analytics: true
   langcode: true
+  language: true
+  path: true
+  timezone: true

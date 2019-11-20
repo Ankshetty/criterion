@@ -1,0 +1,21 @@
+uuid: f8882f25-4c16-4dc4-a52b-a0cc310b530d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_designation
+  module:
+    - text
+    - user
+id: user.user.field_designation
+field_name: field_designation
+entity_type: user
+bundle: user
+label: Designation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

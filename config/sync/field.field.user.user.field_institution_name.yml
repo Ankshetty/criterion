@@ -1,0 +1,21 @@
+uuid: 69d438b2-f837-4056-a785-949cb2f0438e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_institution_name
+  module:
+    - text
+    - user
+id: user.user.field_institution_name
+field_name: field_institution_name
+entity_type: user
+bundle: user
+label: 'Institution Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
